@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "method": "post",
+    "memory": "temp",
+    "body": "temp.detail",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "url": "http://localhost:4000/api/detail",
+    "variable": "response",
+    "invalidJson": false
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "basic-skills/call_api {\"url\":\"http://localhost:4000/api/detail\",\"method\":\"post\",\"body\":\"temp.detail\",\"headers\":{\"Content-Type\":\"application/json\"},\"memory\":\"temp\",\"variable\":\"response\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "342138"
+    }
+  ]
+}

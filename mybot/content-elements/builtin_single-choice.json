@@ -1,0 +1,42 @@
+[
+  {
+    "id": "builtin_single-choice-1R9-eI",
+    "formData": {
+      "text$en": "มีอะไรให้เราช่วยไหมค่ะ",
+      "choices$en": [
+        {
+          "title": "แจ้งซ่อม",
+          "value": "แจ้งซ่อม"
+        },
+        {
+          "title": "อุณหภูมิ",
+          "value": "อุณหภูมิ"
+        }
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T14:26:08.023Z",
+    "modifiedOn": "2020-01-30T14:26:08.023Z"
+  },
+  {
+    "id": "builtin_single-choice-zJujzN",
+    "formData": {
+      "text$en": "ยืนยันการแจ้งซ่อม?",
+      "choices$en": [
+        {
+          "title": "ยืนยัน",
+          "value": "ยืนยัน"
+        },
+        {
+          "title": "ยกเลิก",
+          "value": "ยกเลิก"
+        }
+      ],
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T17:35:47.373Z",
+    "modifiedOn": "2020-01-30T17:35:47.373Z"
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "s21d1omaww",
+    "contentId": "builtin_single-choice-1R9-eI",
+    "invalidContentId": "builtin_text-PdFSg9",
+    "keywords": {
+      "แจ้งซ่อม": [
+        "แจ้งซ่อม"
+      ],
+      "อุณหภูมิ": [
+        "อุณหภูมิ"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 1,
+      "repeatChoicesOnInvalid": true
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-1R9-eI {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "298240"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"s21d1omaww\",\"contentId\":\"builtin_single-choice-1R9-eI\",\"invalidContentId\":\"builtin_text-PdFSg9\",\"keywords\":{\"แจ้งซ่อม\":[\"แจ้งซ่อม\"],\"อุณหภูมิ\":[\"อุณหภูมิ\"]},\"config\":{\"nbMaxRetries\":1,\"repeatChoicesOnInvalid\":true}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-s21d1omaww'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "690654"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"s21d1omaww\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-s21d1omaww']) > Number(1)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "982986"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_text-PdFSg9 {}",
+        "say #!builtin_single-choice-1R9-eI {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "542088"
+    }
+  ]
+}

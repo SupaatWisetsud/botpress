@@ -1,0 +1,112 @@
+[
+  {
+    "id": "builtin_text-mR-_qf",
+    "formData": {
+      "text$en": "เราไม่เข้าใจในสิ่งที่คุณพูด ลองใหม่อีกครั้งค่ะ",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T14:13:16.636Z",
+    "modifiedOn": "2020-01-30T14:13:16.636Z"
+  },
+  {
+    "id": "builtin_text-KDuUQl",
+    "formData": {
+      "text$en": "สวัสดีค่ะ",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T14:14:02.987Z",
+    "modifiedOn": "2020-01-30T14:14:02.987Z"
+  },
+  {
+    "id": "builtin_text-RpkhdL",
+    "formData": {
+      "text$en": "กรุณาบอกรายละเอียดของอาการที่เสียด้วยค่ะ",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T14:27:14.199Z",
+    "modifiedOn": "2020-01-30T14:27:14.199Z"
+  },
+  {
+    "id": "builtin_text-f9hD7b",
+    "formData": {
+      "text$en": "อุณหภูมิเมืองบุรีรัมย์ตอนนี่อยู่ที่ {{temp.res.body.temp}} องศา",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T14:28:06.221Z",
+    "modifiedOn": "2020-01-30T15:54:35.724Z"
+  },
+  {
+    "id": "builtin_text-PdFSg9",
+    "formData": {
+      "text$en": "กรุณาลองใหม่อีกครั้งค่ะ",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T14:28:38.347Z",
+    "modifiedOn": "2020-01-30T14:28:38.347Z"
+  },
+  {
+    "id": "builtin_text-oa320W",
+    "formData": {
+      "text$en": "เกิดการผิดพลาดในการเรียก API ค่ะ",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T14:52:01.167Z",
+    "modifiedOn": "2020-01-30T14:52:01.167Z"
+  },
+  {
+    "id": "builtin_text-OeWVvz",
+    "formData": {
+      "text$en": "ขออภัยค่ะ เกิดข้อผิดพลาด",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T17:36:44.744Z",
+    "modifiedOn": "2020-01-30T17:36:44.744Z"
+  },
+  {
+    "id": "builtin_text-iNkHdq",
+    "formData": {
+      "text$en": "ข้อความที่คุณส่งคือ {{temp.detail}}",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T17:51:50.383Z",
+    "modifiedOn": "2020-01-30T17:51:50.383Z"
+  },
+  {
+    "id": "builtin_text-hSkZCD",
+    "formData": {
+      "text$en": "บันทึกการแจ้งซ่อมเสร็จสิ้น",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T18:19:32.631Z",
+    "modifiedOn": "2020-01-30T18:19:32.631Z"
+  },
+  {
+    "id": "builtin_text-ubmaa2",
+    "formData": {
+      "text$en": "ยกเลิกการแจ้งซ่อม",
+      "markdown$en": true,
+      "typing$en": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-31T09:14:26.221Z",
+    "modifiedOn": "2020-01-31T09:14:26.221Z"
+  }
+]

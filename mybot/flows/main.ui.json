@@ -1,0 +1,248 @@
+{
+  "nodes": [
+    {
+      "id": "entry",
+      "position": {
+        "x": 15,
+        "y": 75
+      }
+    },
+    {
+      "id": "66fa08d244",
+      "position": {
+        "x": 10,
+        "y": 215
+      }
+    },
+    {
+      "id": "skill-c94ecc",
+      "position": {
+        "x": 250,
+        "y": 165
+      }
+    },
+    {
+      "id": "979d28fb67",
+      "position": {
+        "x": 355,
+        "y": 0
+      }
+    },
+    {
+      "id": "30918aa211",
+      "position": {
+        "x": -20,
+        "y": 385
+      }
+    },
+    {
+      "id": "skill-53a8ce",
+      "position": {
+        "x": 225,
+        "y": 355
+      }
+    },
+    {
+      "id": "4a1e3f1c2e",
+      "position": {
+        "x": 420,
+        "y": 490
+      }
+    },
+    {
+      "id": "skill-6c0203",
+      "position": {
+        "x": 655,
+        "y": 20
+      }
+    },
+    {
+      "id": "skill-0b96bf",
+      "position": {
+        "x": 525,
+        "y": 195
+      }
+    },
+    {
+      "id": "1faa60ab2b",
+      "position": {
+        "x": 750,
+        "y": 335
+      }
+    },
+    {
+      "id": "4276bde960",
+      "position": {
+        "x": 930,
+        "y": 195
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "979d28fb67",
+      "sourcePort": "out0",
+      "target": "skill-6c0203",
+      "points": [
+        {
+          "x": 561,
+          "y": 100
+        },
+        {
+          "x": 755,
+          "y": 13
+        }
+      ]
+    },
+    {
+      "source": "entry",
+      "sourcePort": "out1",
+      "target": "66fa08d244",
+      "points": [
+        {
+          "x": 221,
+          "y": 134
+        },
+        {
+          "x": 110,
+          "y": 208
+        }
+      ]
+    },
+    {
+      "source": "entry",
+      "sourcePort": "out0",
+      "target": "skill-c94ecc",
+      "points": [
+        {
+          "x": 221,
+          "y": 108
+        },
+        {
+          "x": 350,
+          "y": 158
+        }
+      ]
+    },
+    {
+      "source": "skill-0b96bf",
+      "sourcePort": "out0",
+      "target": "1faa60ab2b",
+      "points": [
+        {
+          "x": 731,
+          "y": 240
+        },
+        {
+          "x": 850,
+          "y": 328
+        }
+      ]
+    },
+    {
+      "source": "skill-0b96bf",
+      "sourcePort": "out1",
+      "target": "4a1e3f1c2e",
+      "points": [
+        {
+          "x": 731,
+          "y": 266
+        },
+        {
+          "x": 520,
+          "y": 483
+        }
+      ]
+    },
+    {
+      "source": "skill-53a8ce",
+      "sourcePort": "out0",
+      "target": "30918aa211",
+      "points": [
+        {
+          "x": 431,
+          "y": 400
+        },
+        {
+          "x": 80,
+          "y": 378
+        }
+      ]
+    },
+    {
+      "source": "skill-53a8ce",
+      "sourcePort": "out1",
+      "target": "4a1e3f1c2e",
+      "points": [
+        {
+          "x": 431,
+          "y": 426
+        },
+        {
+          "x": 520,
+          "y": 483
+        }
+      ]
+    },
+    {
+      "source": "skill-6c0203",
+      "sourcePort": "out1",
+      "target": "4276bde960",
+      "points": [
+        {
+          "x": 861,
+          "y": 91
+        },
+        {
+          "x": 1030,
+          "y": 188
+        }
+      ]
+    },
+    {
+      "source": "skill-6c0203",
+      "sourcePort": "out0",
+      "target": "skill-0b96bf",
+      "points": [
+        {
+          "x": 861,
+          "y": 65
+        },
+        {
+          "x": 625,
+          "y": 188
+        }
+      ]
+    },
+    {
+      "source": "skill-c94ecc",
+      "sourcePort": "out0",
+      "target": "979d28fb67",
+      "points": [
+        {
+          "x": 456,
+          "y": 210
+        },
+        {
+          "x": 455,
+          "y": -7
+        }
+      ]
+    },
+    {
+      "source": "skill-c94ecc",
+      "sourcePort": "out1",
+      "target": "skill-53a8ce",
+      "points": [
+        {
+          "x": 456,
+          "y": 236
+        },
+        {
+          "x": 325,
+          "y": 348
+        }
+      ]
+    }
+  ]
+}

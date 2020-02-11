@@ -1,0 +1,88 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "hnhrws7n30",
+    "contentId": "builtin_single-choice-zJujzN",
+    "invalidContentId": "builtin_text-PdFSg9",
+    "keywords": {
+      "ยืนยัน": [
+        "ยืนยัน"
+      ],
+      "ยกเลิก": [
+        "ยกเลิก"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 1,
+      "repeatChoicesOnInvalid": true
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-zJujzN {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "329583"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"hnhrws7n30\",\"contentId\":\"builtin_single-choice-zJujzN\",\"invalidContentId\":\"builtin_text-PdFSg9\",\"keywords\":{\"ยืนยัน\":[\"ยืนยัน\"],\"ยกเลิก\":[\"ยกเลิก\"]},\"config\":{\"nbMaxRetries\":1,\"repeatChoicesOnInvalid\":true}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-hnhrws7n30'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "onEnter": [],
+      "id": "116357"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"hnhrws7n30\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-hnhrws7n30']) > Number(1)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "963432"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_text-PdFSg9 {}",
+        "say #!builtin_single-choice-zJujzN {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "529286"
+    }
+  ]
+}

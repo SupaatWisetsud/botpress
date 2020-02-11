@@ -1,0 +1,194 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'hi'",
+          "node": "choice-c94ecc"
+        },
+        {
+          "condition": "true",
+          "node": "node-66be"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "66fa08d244",
+      "name": "node-66be",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-mR-_qf",
+        "builtin/resetContext {}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-c94ecc",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-c94ecc",
+      "flow": "skills/choice-c94ecc.flow.json",
+      "next": [
+        {
+          "caption": "User picked [แจ้งซ่อม]",
+          "condition": "temp['skill-choice-ret-s21d1omaww'] == \"แจ้งซ่อม\"",
+          "node": "node-2ec8"
+        },
+        {
+          "caption": "User picked [อุณหภูมิ]",
+          "condition": "temp['skill-choice-ret-s21d1omaww'] == \"อุณหภูมิ\"",
+          "node": "CallAPI-53a8ce"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "979d28fb67",
+      "name": "node-2ec8",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-6c0203"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-RpkhdL"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"detail\",\"value\":\"{{event.preview}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "30918aa211",
+      "name": "node-e7bd",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-f9hD7b",
+        "builtin/resetContext {}",
+        "builtin/resetSession {}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-53a8ce",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-53a8ce",
+      "flow": "skills/CallAPI-53a8ce.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "node-e7bd"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": "node-5812"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "4a1e3f1c2e",
+      "name": "node-5812",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-oa320W"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-6c0203",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-6c0203",
+      "flow": "skills/choice-6c0203.flow.json",
+      "next": [
+        {
+          "caption": "User picked [ยืนยัน]",
+          "condition": "temp['skill-choice-ret-hnhrws7n30'] == \"ยืนยัน\"",
+          "node": "CallAPI-0b96bf"
+        },
+        {
+          "caption": "User picked [ยกเลิก]",
+          "condition": "temp['skill-choice-ret-hnhrws7n30'] == \"ยกเลิก\"",
+          "node": "node-17eb"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "skill-0b96bf",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-0b96bf",
+      "flow": "skills/CallAPI-0b96bf.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "node-668e"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": "node-5812"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "1faa60ab2b",
+      "name": "node-668e",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-hSkZCD",
+        "builtin/resetContext {}",
+        "builtin/resetSession {}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "4276bde960",
+      "name": "node-17eb",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-ubmaa2",
+        "builtin/resetContext {}",
+        "builtin/resetSession {}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

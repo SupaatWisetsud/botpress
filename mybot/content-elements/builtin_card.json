@@ -1,0 +1,24 @@
+[
+  {
+    "id": "builtin_card-noMH6I",
+    "formData": {
+      "title$en": "ยืนยันการแจ้งซ่อม?",
+      "actions$en": [
+        {
+          "title": "ยืนยัน",
+          "action": "Postback",
+          "text": "บันทึกกการแจ้งซ้อมเสร็จสิ้น",
+          "payload": "{{event.preview}}"
+        },
+        {
+          "title": "ยกเลิก",
+          "action": "Say something",
+          "text": "ทำการยกเลิกการส่งคำร้องเรียบร้อย"
+        }
+      ]
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-01-30T14:12:10.161Z",
+    "modifiedOn": "2020-01-30T17:31:37.985Z"
+  }
+]
